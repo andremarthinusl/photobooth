@@ -1,0 +1,134 @@
+/* Additional custom styles */
+.webcam-container {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.webcam-container video {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.capture-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.capture-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  transition: transform 0.3s ease-out;
+}
+
+.capture-button:active::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.social-link {
+  transition: transform 0.2s ease;
+}
+
+.social-link:hover {
+  transform: scale(1.1);
+}
+
+/* Photo frame styles */
+.polaroid {
+  background: white;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease;
+}
+
+.polaroid:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.vintage {
+  filter: sepia(0.5) contrast(1.2) brightness(0.9);
+  border: 8px solid #d4af37;
+}
+
+.rounded-frame {
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Options styles */
+.options-container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.option-button {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.option-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  transition: transform 0.3s ease-out;
+}
+
+.option-button:active::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.option-button.selected {
+  transform: scale(1.05);
+}
+
+/* Frame preview styles */
+.frame-preview {
+  width: 100%;
+  height: 80px;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+.frame-preview:hover {
+  transform: scale(1.05);
+} 
